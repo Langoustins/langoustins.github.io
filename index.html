@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osu!</title>
+    <link rel="icon" href="images/osu-logo.ico">
+    <link rel="stylesheet" href="style.css">
+    <div class="logo">
+        <img src="images/osu-logo.png" alt="Osu Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="banner">
+        <div class="banner-left">
+            <img src="images/osu-logo.png" alt="Osu Logo Large">
+        </div>
+        <div class="banner-right">
+            <video id="osu-video" controls autoplay loop>
+                <source src="videos/osu-gameplay-background.mp4" type="video/mp4">
+                Ton navigateur ne supporte pas la vidéo.
+            </video>
+            <button id="toggle-sound">🔊 Toggle Sound</button>
+        </div>
+    </section>
+</main>
+<body>
+    <header>
+        <h1>Welcome to Osu!</h1>
+        
+        <nav>
+            
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>This is a template HTML page for your website. Add your content here.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Jasmin Website. All rights reserved.</p>
+    </footer>
+<script>
+const video = document.getElementById('osu-video');
+const btn = document.getElementById('toggle-sound');
+
+btn.addEventListener('click', () => {
+    video.muted = !video.muted;
+    btn.textContent = video.muted ? "🔇 Sound Off" : "🔊 Sound On";
+});
+</script>
+</body>
+</html>
